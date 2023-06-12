@@ -79,5 +79,10 @@ namespace manageApp
                 return;
             }
         }
+
+        private void 添加课程ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
