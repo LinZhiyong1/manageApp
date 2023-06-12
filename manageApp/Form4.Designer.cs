@@ -77,6 +77,7 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.ToolTipText = "添加";
+            this.toolStripButton1.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
             // 
             // toolStripButton2
             // 
@@ -87,6 +88,7 @@
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.ToolTipText = "删除";
+            this.toolStripButton2.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
             // toolStripButton3
             // 
@@ -97,6 +99,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.ToolTipText = "编辑";
+            this.toolStripButton3.Click += new System.EventHandler(this.修改ToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 

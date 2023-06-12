@@ -18,12 +18,15 @@ namespace manageApp
         public Form41()
         {
             InitializeComponent();
+            button3.Hide();
         }
 
         public Form41(string[] a)
         {
             InitializeComponent();
-            for (int i = 0; i < 5; i++)
+            button1.Hide();
+            button2.Hide();
+            for (int i = 0; i < 4; i++)
             {
                 str[i] = a[i];
             }
@@ -33,7 +36,12 @@ namespace manageApp
             textBox4.Text = str[3];
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form41_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
@@ -41,7 +49,7 @@ namespace manageApp
             }
             else
             {
-                string sql = "Insert into tb_student values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')";
+                string sql = "Insert into tb_teacher values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')";
                 MessageBox.Show(sql);
                 Dao dao = new Dao();
                 int result = dao.Excute(sql);
@@ -56,9 +64,9 @@ namespace manageApp
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" )
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("修改后有空值，请检查", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -66,11 +74,11 @@ namespace manageApp
             {
                 TextBox[] textBoxes = new TextBox[4] { textBox1, textBox2, textBox3, textBox4 };
                 string[] arr = { "id", "name", "password", "title" };
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     if (textBoxes[i].Text != str[i])
                     {
-                        string sql = "update tb_student set " + arr[i] + " = '" + textBoxes[i].Text + "' where id = '" + str[0] + "' and name = '" + str[1] + "' ";
+                        string sql = "update tb_teacher set " + arr[i] + " = '" + textBoxes[i].Text + "' where id = '" + str[0] + "' and name = '" + str[1] + "' ";
                         MessageBox.Show(sql);
                         Dao dao = new Dao();
                         dao.Excute(sql);
@@ -78,11 +86,6 @@ namespace manageApp
                     }
                 }
             }
-        }
-
-        private void Form41_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -55,14 +55,21 @@ namespace manageApp
         private void 删除学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("确定要删除吗？", "提示", MessageBoxButtons.OKCancel);
-            string id, name;
-            id = dataGridView1.SelectedCells[0].Value.ToString();
-            name = dataGridView1.SelectedCells[1].Value.ToString();
-            string sql = "delete from tb_student where id='" + id + "' and name= '" + name + "'";
-            MessageBox.Show(sql);
-            Dao dao = new Dao();
-            dao.Excute(sql);
-            show_Table();
+            if ("OK".Equals(result.ToString()))
+            {
+                string id, name;
+                id = dataGridView1.SelectedCells[0].Value.ToString();
+                name = dataGridView1.SelectedCells[1].Value.ToString();
+                string sql = "delete from tb_student where id='" + id + "' and name= '" + name + "'";
+                MessageBox.Show(sql);
+                Dao dao = new Dao();
+                dao.Excute(sql);
+                show_Table();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
