@@ -38,13 +38,13 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.课程选择ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.我的课程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -121,6 +121,13 @@
             this.我的课程ToolStripMenuItem.Text = "我的课程";
             this.我的课程ToolStripMenuItem.Click += new System.EventHandler(this.我的课程ToolStripMenuItem_Click);
             // 
+            // 修改密码ToolStripMenuItem
+            // 
+            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.修改密码ToolStripMenuItem.Text = "修改密码";
+            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -138,36 +145,29 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 403);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "课程名称";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "课程简介";
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "课程学分";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "授课老师";
-            this.Column3.Name = "Column3";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // 修改密码ToolStripMenuItem
+            // Column1
             // 
-            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.修改密码ToolStripMenuItem.Text = "修改密码";
-            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
+            this.Column1.HeaderText = "课程编号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "课程名称";
+            this.Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "授课教师";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "课程学分";
+            this.Column3.Name = "Column3";
             // 
             // Form3
             // 
@@ -205,11 +205,11 @@
         private System.Windows.Forms.ToolStripMenuItem 课程选择ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 我的课程ToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
     }
 }

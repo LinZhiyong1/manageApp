@@ -69,7 +69,6 @@ namespace manageApp
                 id = dataGridView1.SelectedCells[0].Value.ToString();
                 name = dataGridView1.SelectedCells[1].Value.ToString();
                 string sql = "delete from tb_teacher where id='" + id + "' and name= '" + name + "'";
-                MessageBox.Show(sql);
                 Dao dao = new Dao();
                 dao.Excute(sql);
                 show_Table();

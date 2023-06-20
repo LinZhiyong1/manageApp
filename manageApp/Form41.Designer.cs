@@ -59,7 +59,6 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "保存";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox4
             // 
@@ -124,16 +123,6 @@
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 12;
             this.label1.Text = "教师工号：";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(24, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "修改";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form41
             // 

@@ -14,11 +14,10 @@ namespace manageApp
 {
     public partial class Form41 : Form
     {
-        string[] str = new string[5];
+        string[] str = new string[4];
         public Form41()
         {
             InitializeComponent();
-            button3.Hide();
         }
 
         public Form41(string[] a)
@@ -87,5 +86,6 @@ namespace manageApp
                 }
             }
         }
+
     }
 }
