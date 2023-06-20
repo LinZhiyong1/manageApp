@@ -51,10 +51,14 @@ namespace manageApp
 
         private void 取消选课ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("没有选课信息");
+                return;
+            }
             DialogResult result = MessageBox.Show("确定要删除该吗？", "提示", MessageBoxButtons.OKCancel);
             string id = dataGridView1.SelectedCells[0].Value.ToString();
             string sql = "delete from tb_student_course where sid ='" + sid + "' and cid = '" + id + "'";
-            MessageBox.Show(sql);
             Dao dao = new Dao();
             dao.Excute(sql);
             show_Table();

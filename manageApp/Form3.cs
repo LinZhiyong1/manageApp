@@ -22,6 +22,7 @@ namespace manageApp
         public Form3(string sid)
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
             this.sid = sid;
             toolStripStatusLabel3.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             toolStripStatusLabel1.Text = "欢迎学号为" + sid + "的同学登录选课系统";
@@ -65,6 +66,8 @@ namespace manageApp
 
         private void 课程选择ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //int cout = dataGridView1.SelectedRows.Count;
+            //MessageBox.Show($"{cout}");
             string cid = dataGridView1.SelectedCells[0].Value.ToString();// 获取选中的课程号
             string sql1 = "select * from tb_student_course where sid = '" + sid + "'and cid = '" + cid + "' ";
             Dao dao = new Dao();
