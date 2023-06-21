@@ -61,7 +61,7 @@ namespace manageApp
         }
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { 
             DialogResult result = MessageBox.Show("确定要删除吗？", "提示", MessageBoxButtons.OKCancel);
             if ("OK".Equals(result.ToString()))
             {
